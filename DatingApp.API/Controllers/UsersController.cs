@@ -20,6 +20,7 @@ namespace DatingApp.API.Controllers
             _mapper = mapper;
             _repo = repo;
         }
+        
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
@@ -37,7 +38,7 @@ namespace DatingApp.API.Controllers
 
             var userToReturn = _mapper.Map<UserForDetailedDto>(user);
 
-            return Ok( );
+            return Ok(userToReturn);
         }
     }
 }
